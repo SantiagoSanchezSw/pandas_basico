@@ -45,3 +45,8 @@ print("las columnas",  _colums)
 print("correlaciones entre datos", dataframe.corr())
 
 
+#tambien podemos analizar valores para crear nuevas columnas 
+container = dataframe
+container["NEW_Y_VAR"] = np.where(container['SalePrice']>214000.000000 , 1, 0) #donde 1 es si cumple con la condicion y 0 es no 
+print(container)
+
